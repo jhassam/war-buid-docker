@@ -6,6 +6,7 @@ node {
           git 'https://github.com/priximmo/war-build-docker.git'
     }
     stage('Maven package'){
+            sh 'mvn clean install'
             sh 'mvn package'
     }
     def img = stage('Build') {
