@@ -3,7 +3,7 @@ node {
    def registryProjet='registry.gitlab.com/jhassam/docker-images/wartest'
    def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
     stage('Clone') {
-          git 'https://github.com/priximmo/war-build-docker.git'
+          git 'https://github.com/jhassam/war-build-docker.git'
     }
     stage('Maven package'){
             sh 'mvn clean install'
